@@ -17,17 +17,22 @@ const handleSend = () =>{
 useEffect(()=>{
   const ws = new WebSocket("ws://localhost:8080")
   setSocket(ws);
-  ws.onmessage = (e) => {
-    alert(e.data);
-  }
+  
 }, [])
 
 
   return (
     <>
       <div>
-        <input ref={inputRef} type="text" />
-        <button onClick={handleSend}>Send</button>
+        <div>code: {uid}</div>
+          <div>
+            messages
+          </div>
+          <div>
+            <input type="text" /> <button>send</button>
+
+
+          </div>
       </div>
     </>
 
