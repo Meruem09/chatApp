@@ -10,7 +10,7 @@ const [message, setMessage] = useState<{text: string; sender: "me" | "other"}[]>
 const uid= '123';
 
 useEffect(()=>{
-  const ws = new WebSocket("ws://localhost:8080")
+  const ws = new WebSocket(import.meta.env.VITE_BE_URL)
   ws.onopen = () => console.log("Connected");
   ws.onmessage = (e) => {
     const msg = JSON.parse(e.data);
