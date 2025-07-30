@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "tailwindcss";
+
+.custom-scrollbar {
+  scrollbar-width: 1px; /* For Firefox */
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+ width: 5px;
+ scrollbar-color: #313131 transparent;
+}
+
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #313131; /* Light blue */
+  border-radius: 5px; /* Rounded beam */
+}

@@ -60,11 +60,13 @@ wss.on("connection", function(socket){
         const roomCode = (socket as any).roomCode;
         if(roomCode && rooms[roomCode]){
             rooms[roomCode] = rooms[roomCode].filter(r => r !== socket)
-        }
-        if(rooms[roomCode].length === 0){
+            
+            if(rooms[roomCode].length === 0){
             delete rooms[roomCode];
             console.log(`Deleted room: ${roomCode}`);
         }
+        }
+        
     })
 
 })
